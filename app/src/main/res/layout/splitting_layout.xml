@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F7F4F0"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.seanhu.android.views.InboxLayout.widget.InboxBackgroundScrollView
+            android:overScrollMode="always"
+            android:scrollbars="none"
+            android:id="@+id/inbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:id="@+id/item1"
+                    android:layout_width="match_parent" android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="Item 1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bottom_divider_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp" />
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/item2"
+                    android:layout_width="match_parent" android:layout_height="100dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="Item 2" android:layout_gravity="center"
+                        android:background="@drawable/bottom_divider_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/item3"
+                    android:layout_width="match_parent" android:layout_height="100dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="Item 3" android:layout_gravity="center"
+                        android:background="@drawable/bottom_divider_bg"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+
+                <!--this is very important when scrollview's height is greater than the hegiht of scrollview's childview-->
+                <View android:tag="empty_view" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.seanhu.android.views.InboxLayout.widget.InboxBackgroundScrollView>
+
+        <com.seanhu.android.views.InboxLayout.widget.InboxLayoutScrollView
+            android:id="@+id/inboxContent"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:text="Article..."/>
+        </com.seanhu.android.views.InboxLayout.widget.InboxLayoutScrollView>
+
+    </FrameLayout>
+</LinearLayout>

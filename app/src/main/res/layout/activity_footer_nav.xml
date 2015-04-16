@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:droidicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/crispy_grey"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/footer"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageButton
+            style="@style/Phoenix.Widget.Button.Borderless"
+            android:layout_width="0dp"
+            android:id="@+id/navHome"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_menu_home" />
+        <ImageButton
+            style="@style/Phoenix.Widget.Button.Borderless"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_menu_compass"
+            android:id="@+id/navTrending"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" />
+        <ImageButton
+            style="@style/Phoenix.Widget.Button.Borderless"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_menu_star"
+            android:id="@+id/navStars"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" />
+        <ImageButton
+            style="@style/Phoenix.Widget.Button.Borderless"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_menu_myplaces"
+            android:id="@+id/navMe"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_above="@+id/footer"
+        android:background="?android:windowBackground"
+        android:id="@+id/content"></FrameLayout>
+</RelativeLayout>
